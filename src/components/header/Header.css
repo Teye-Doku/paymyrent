@@ -97,7 +97,7 @@
   background: #424242;
   height: 90vh;
   position: absolute;
-  top: 13.5vh;
+  top: 12vh;
   transition: all 0.3s ease-in-out;
 }
 .sidebar__items {
