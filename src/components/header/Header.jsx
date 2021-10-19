@@ -51,7 +51,7 @@ import { navitems } from '../../utilities/navitems'
                     { navitems.map( navitem => (
                         <li className="navitem"> <Link to={navitem.url}>{navitem.title}</Link></li>
                     ))}
-                    <button>Login</button>
+                    <button><Link to="/login">Login</Link></button>
                 </nav>}
             { mobile &&  
             <div className="sidebar__toggle" >
