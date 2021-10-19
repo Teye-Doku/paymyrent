@@ -1,0 +1,24 @@
+.service-wrapper {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  background-color: #f1f6f4;
+}
+.ser-inner h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.0015em;
+  color: #16322e;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  font-family: "Roboto condensed", sans-serif;
+}
+.ser-inner p {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.0015em;
+  color: #606268;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+}
