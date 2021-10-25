@@ -26,6 +26,15 @@
   font-size: 50px;
 }
 
+.home__hero select {
+  height: 35px;
+  margin-right: 10px;
+  background-color: #404040;
+  color: blue;
+  border: none;
+  border-radius: 5px;
+}
+
 .home__hero input {
   width: 400px;
   height: 40px;
@@ -69,5 +78,8 @@
 
   .home__hero > h1 {
     text-align: center;
+  }
+  .home__hero select {
+    margin: 10px auto 10px 150px;
   }
 }

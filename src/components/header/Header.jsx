@@ -3,7 +3,9 @@ import logo from '../../images/paymyrent.png';
 import './Header.css';
 import  * as FaIcons from "react-icons/fa";
 import {
- Link
+ Link,
+ NavLink,
+ withRouter
 } from 'react-router-dom'
 
 
@@ -28,18 +30,9 @@ import { navitems } from '../../utilities/navitems'
      }
  }, [])
  useEffect(() => {
-      
-     const handleShowSidbar = () => {
           if(window.innerWidth < 1065) {
-               setSidebar(true);
-          }else {
-               setSidebar(false);
+               setMobile(true);
           }
-     }
-     window.addEventListener("resize",handleShowSidbar);
-     return () => {
-        window.removeEventListener("resize",handleShowSidbar);
-     }
  }, [])
      
     return (
@@ -49,7 +42,7 @@ import { navitems } from '../../utilities/navitems'
                 <img className="header__logo" src={logo} alt="logo" />
                 {!mobile &&  <nav className="header__nav">
                     { navitems.map( navitem => (
-                        <li className="navitem"> <Link to={navitem.url}>{navitem.title}</Link></li>
+                        <li className="navitem" key={navitem.title}> <NavLink to={navitem.url} exact activeClassName="active-link">{navitem.title}</NavLink></li>
                     ))}
                     <button><Link to="/login">Login</Link></button>
                 </nav>}
@@ -60,16 +53,23 @@ import { navitems } from '../../utilities/navitems'
                     :<FaIcons.FaBars className="sidebar__toggle__logo"  onClick={() => setSidebar(!sidebar)}  />} 
                 </div>}
            </header>
-           { sidebar && <div className="sidebar">
+           { sidebar && <div className={ sidebar ? 'sidebar active' :'sidebar'}>
              {mobile &&  <nav className="sidebar__items">
                     { navitems.map( navitem => (
-                        <li className="sidebar__navitem"> <Link to={navitem.url}>{navitem.title}</Link></li>
+                        <li className="sidebar__navitem" key={navitem.title}> <NavLink to={navitem.url} exact activeClassName="active-link">{navitem.title}</NavLink></li>
                     ))}
                     <button>Login</button>
                 </nav>}
            </div>}
+           {/* <div className="header__filter">
+               <select>
+                   <option value="price">Price</option>
+                   <option value="location">Location</option>
+                   <option value="room">Room</option>
+               </select>
+           </div> */}
           </>
       
     )
 }
-export default Header;
+export default  withRouter(Header);

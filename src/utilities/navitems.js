@@ -1,27 +1,33 @@
 const navitems = [
     {
         'title':'Home',
-        'url':"/"
+        'url':"/",
+        'active':'active-link'
     },
     {
         'title':'About',
-        'url':"/about"
+        'url':"/about",
+        'active':'active-link'
     },
     {
         'title':'Services',
-        'url':"/services"
+        'url':"/services",
+        'active':'active-link'
     },
     {
         'title':'Offices',
-        'url':"/offices"
+        'url':"/offices",
+        'active':'active-link'
     },
     {
         'title':'Stores',
-        'url':"/services"
+        'url':"/stores",
+        'active':'active-link'
     },
     {
         'title':'Contact',
-        'url':"/contact"
+        'url':"/contact",
+        'active':'active-link'
     },
 ];
 

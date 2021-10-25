@@ -7,10 +7,17 @@ const Home = () => {
          <div className="home" >
              <div className="home__hero">
                  <h1>Find Your House Rent</h1>
-                 <div>
-                     <input placeholder="Search..." type="text" />
+                 
+                     <div>
+                       <select>
+                           <option value="All">All</option>
+                           <option value="single">Single room</option>
+                           <option value="bedroom">2 bedroom </option>
+                      </select>  
+                       <input placeholder="Search..." type="text" />
                      <button>Find Now</button>
-                 </div>
+                     </div>
+                 
              </div>
              <HotelList />
              <Service />

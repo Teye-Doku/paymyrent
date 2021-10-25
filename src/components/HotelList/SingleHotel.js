@@ -1,11 +1,14 @@
-import React from 'react';
+import './SingleHotel.css';
 import map from '../../images/map.svg';
 import bedroom from '../../images/bed.svg';
 import bath from '../../images/bath.svg';
+import {
+     Link
+} from 'react-router-dom';
 
 
 const SingleHotel = (props) => {
-    const {name, img, place, bed, bathroom, price} = props.hotel;
+    const { id, name, img, place, bed, bathroom, price } = props.hotel;
     return (
         <div className="col-md-4">
             <div className="card hotel-card">
@@ -19,7 +22,7 @@ const SingleHotel = (props) => {
                     </div>
                     <div className="d-flex justify-content-between mt_40">
                    <h4>  <span>&#8373;</span> {price}</h4>
-                        <button className="btn btn-primary default-btn">View Details</button>
+                        <button className="btn btn-primary default-btn"><Link to={`/apartment/${id}`}>View Details</Link></button>
                     </div>
                 </div>
             </div>

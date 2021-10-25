@@ -1,0 +1,124 @@
+.detailpage {
+  margin-top: 20px;
+  width: 800px;
+  height: 200;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+}
+.detailpage img {
+  transition: all 0.4s ease-in;
+}
+.detailpage img:hover {
+  transform: scale(1.1);
+  transform: rotate(180);
+}
+.secondimage {
+  width: 400px;
+  height: inherit;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+/*detail informations*/
+.detailpage__info {
+  margin-top: 20px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: -10px;
+}
+.detailpage_iconsection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.detialpageinfo__log {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.detialpageinfo__log p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.detialpageinfo__log img {
+  margin-left: 5px;
+}
+
+.detailpage_description {
+  margin-top: 10px;
+  padding-left: -10px;
+}
+.detailpage_description h3 {
+  font-family: "Roboto condensed", sans-serif;
+  font-size: 20px;
+}
+.detailpage_description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail__location {
+  width: 800px;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-sizing: border-box;
+}
+.detail__payment {
+  width: 800px;
+  height: 100px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+.detail__payment button {
+  background-color: #1c85e8;
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .detailpage {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  .secondimage {
+    display: none;
+  }
+  .detail__location {
+    width: 90%;
+  }
+  .detailpage__info {
+    margin-left: 25px;
+  }
+  .detail__payment {
+    width: 90%;
+  }
+}
