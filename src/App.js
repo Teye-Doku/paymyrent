@@ -40,10 +40,12 @@ function App() {
       <Route path="/services" exact>
         <Header />
         <Services />
+        <Footer />
       </Route>
       <Route path="/contact" exact>
         <Header />
         <Contact />
+        <Footer />
       </Route>
       <Route path="/about" exact>
         <Header />

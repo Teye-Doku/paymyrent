@@ -1,0 +1,66 @@
+.service__hero {
+  width: 100%;
+  height: 300px;
+  background-color: #e6d9ee;
+  padding-left: 100px;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+.service__hero h3 {
+  font-family: "Roboto condensed", sans-serif;
+  color: #275a53;
+  font-size: 30px;
+}
+.service__hero p {
+  font-family: "Montserrat", sans-serif;
+  color: #275a53;
+  font-weight: bold;
+}
+
+.service__renting,
+.service__shelter {
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  height: fit-content;
+  margin: 10px 0;
+  transition: all 0.3s ease-in;
+}
+.service__renting:hover,
+.service__shelter:hover {
+  transform: scale(1.1);
+}
+.service__shelter {
+  background-color: #f7f7ff;
+}
+.serviceRenting__info,
+.serviceShelter__info {
+  width: 500px;
+}
+.serviceRenting__info h3,
+.serviceShelter__info h3 {
+  font-family: "Roboto condensed", sans-serif;
+  color: #404040;
+  font-weight: 500;
+  font-size: 20px;
+}
+.serviceRenting__info p,
+.serviceShelter__info p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+@media screen and (max-width: 480px) {
+  .service__hero {
+    height: 200px;
+    padding-left: 40px;
+    padding-top: 30px;
+  }
+  .service__renting {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -2,8 +2,10 @@ import './Contact.css';
 
 const  Contact = () =>{
     return (
-        <div>
-             Contact page
+        <div className="contact" style={{height:"1500px"}}>
+            <div className="contact__hero">
+                <h3>Contact Us:</h3>
+            </div>
         </div>
     )
 }

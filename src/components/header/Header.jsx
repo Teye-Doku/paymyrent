@@ -56,7 +56,7 @@ import { navitems } from '../../utilities/navitems'
            { sidebar && <div className={ sidebar ? 'sidebar active' :'sidebar'}>
              {mobile &&  <nav className="sidebar__items">
                     { navitems.map( navitem => (
-                        <li className="sidebar__navitem" key={navitem.title}> <NavLink to={navitem.url} exact activeClassName="active-link">{navitem.title}</NavLink></li>
+                        <li className="sidebar__navitem" onClick={()=>setSidebar(false)} key={navitem.title}> <NavLink to={navitem.url} exact activeClassName="active-link">{navitem.title}</NavLink></li>
                     ))}
                     <button>Login</button>
                 </nav>}
