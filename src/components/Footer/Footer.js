@@ -37,9 +37,6 @@ const  Footer = () => {
                   <p>Careers</p>
               </div>
            </div>
-           {/* <div className="footer__right">
-                <h3>Social Media</h3>
-           </div> */}
       </div>
         </>
     )
