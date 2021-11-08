@@ -102,9 +102,10 @@
   background: #424242;
   height: 90vh;
   position: absolute;
-  top: 12.5vh;
+  top: 8.5vh;
   left: -100%;
   transition: all 0.7s ease-out;
+  z-index: 1;
 }
 .sidebar.active {
   left: 0;
