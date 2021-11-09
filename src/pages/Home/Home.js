@@ -6,15 +6,15 @@ const Home = () => {
      return (
          <div className="home" >
              <div className="home__hero">
-                 <h1>Find Your House Rent</h1>
+                 {/* <h1>Find Your House Rent</h1> */}
                  
                      <div>
-                       <select>
+                       {/* <select>
                            <option value="All">All</option>
                            <option value="single">Single room</option>
                            <option value="bedroom">2 bedroom </option>
-                      </select>  
-                       <input placeholder="Search..." type="text" />
+                      </select>   */}
+                       <input placeholder="Enter an address,neighborhood or city." type="text" />
                      <button>Find Now</button>
                      </div>
                  

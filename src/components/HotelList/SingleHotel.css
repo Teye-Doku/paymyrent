@@ -2,12 +2,7 @@ span {
   content: "\20B5";
 }
 
-.hotel-card {
-  transition: all 0.3s ease-in;
-}
-.hotel-card:hover {
-  transform: scale(1.2);
-}
+
 .hotel-card a {
   text-decoration: none;
   color: white;
