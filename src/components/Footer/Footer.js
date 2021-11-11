@@ -4,7 +4,13 @@ import './Footer.css';
 const  Footer = () => {
     return (
         <>
-          <div className="footer">
+          <div className="footer"
+              style={{
+                background:
+                    "linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./african_pattern.png')",
+                backgroundSize: "contain",
+            }}
+          >
            <div className="footer__left">
               <div className="footer__item">
                   <h3>About</h3>

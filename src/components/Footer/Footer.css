@@ -1,7 +1,6 @@
 .footer {
   width: 100%;
   min-height: 250px;
-  background-color: #275a53;
   display: flex;
 }
 
@@ -16,22 +15,24 @@
   color: white;
   font-size: 14px;
   margin-top: 15px;
+  font-weight: bold;
 }
 
 .footer__spacing {
   margin: 10px 0;
   width: 26px;
   height: 4px;
-  background-color: blue;
+  background-color: white;
   border-radius: 2px;
 }
 
 .footer__item p {
   color: white;
-  font-size: 11px;
+  font-size: 12px;
   font-family: "Montserrat", sans-serif;
   margin-top: 15px;
   cursor: pointer;
+  font-weight: bold;
 }
 .header__licensed {
   display: flex;
@@ -49,6 +50,7 @@
   border-radius: 5px;
   margin-left: 10px;
 }
+
 .header__licensed > p {
   font-family: "Montserrat", sans-serif;
 }
