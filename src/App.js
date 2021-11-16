@@ -17,7 +17,7 @@ import Offices from './pages/Offices/Offices';
 import Services from './pages/Services/Services';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-
+import Houses from './pages/Houses/Houses';
 
 function App() {
   return (
@@ -47,10 +47,13 @@ function App() {
         <Contact />
         <Footer />
       </Route>
+      <Route path="/houses" exact>
+        <Header />
+        <Houses />
+      </Route>
       <Route path="/about" exact>
         <Header />
         <About />
- 
       </Route>
       <Route path="/signup" exact>
         <Signup />
