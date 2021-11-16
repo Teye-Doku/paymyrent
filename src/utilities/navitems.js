@@ -15,16 +15,6 @@ const navitems = [
         'active':'active-link'
     },
     {
-        'title':'Offices',
-        'url':"/offices",
-        'active':'active-link'
-    },
-    {
-        'title':'Stores',
-        'url':"/stores",
-        'active':'active-link'
-    },
-    {
         'title':'Contact',
         'url':"/contact",
         'active':'active-link'

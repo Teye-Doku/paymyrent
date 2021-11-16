@@ -1,6 +1,7 @@
 import './Home.css';
 import Service from '../../components/Services/Service';
-import HotelList from '../../components/HotelList/HotelList';
+import housevector from '../../images/housevec.jpg'
+
 
 const Home = () => {
      return (
@@ -18,8 +19,36 @@ const Home = () => {
                      <button>Find Now</button>
                      </div>
                  
-             </div>
-             <HotelList />
+             </div> 
+              <div className="home__services">
+                    <div className="home__service__item">
+                       <img src={housevector} alt="" />
+                       <h3>Rent a house</h3>
+                       <div className="home__service__item__p_container">
+                       <p>Find the most interesting houses for rent, easy on your pocket</p>
+                       </div>
+                       <button >search houses</button>
+                    
+                    </div>
+                    <div className="home__service__item">
+                       <img src={housevector} alt="" />
+                       <h3>Rent an office</h3>
+                       <div className="home__service__item__p_container">
+                       <p>Find the most interesting houses for rent, easy on your pocket</p>
+                       </div>
+                       <button >search offices</button>
+                    
+                    </div>
+                    <div className="home__service__item">
+                       <img src={housevector} alt="" />
+                       <h3>Rent a store</h3>
+                       <div className="home__service__item__p_container">
+                       <p>Find the most interesting houses for rent, easy on your pocket</p>
+                       </div>
+                       <button >search stores</button>
+                    
+                    </div>
+              </div>
              <Service />
          </div>
      );

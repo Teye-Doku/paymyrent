@@ -46,7 +46,7 @@
 }
 .home__hero button {
   width: 100px;
-  height: 40px;
+  height: 60px;
   color: white;
   background-color: #404040;
   border: none;
@@ -61,6 +61,65 @@
   background-color: white;
   color: #275a53;
   border: 1px solid #275a53;
+}
+
+/*services styling*/
+
+.home__services {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__service__item {
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+  padding: 20px 0;
+  margin-left: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.home__service__item:hover {
+  transform:scale(1);
+}
+.home__service__item img {
+   width: 200px;
+   object-fit: contain;
+}
+.home__service__item:hover button {
+   background-color: #e2d562;
+   color: white;
+}
+.home__service__item h3 {
+   font-family: "Roboto condensed",sans-serif;
+   font-weight: 400;
+}
+.home__service__item p {
+   font-family: "Montserrat",sans-serif;
+   font-weight: 600;
+}
+
+.home__service__item button {
+   background-color: white;
+   border-radius: 5px;
+   width: 150px;
+   height: 50px;
+   color: #e2d562;
+   font-family: "Montserrat",sans-serif;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   font-weight: bold;
+   border: 1px solid #e2d562;
+}
+.home__service__item__p_container {
+   width: 220px;
+   text-align: center;
 }
 @media screen and (max-width: 700px) {
   .home__hero {
