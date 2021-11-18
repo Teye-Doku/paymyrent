@@ -2,17 +2,16 @@ import { useState,useEffect } from 'react';
 import livingroom from '../../images/livingroom.jpg'
 import bedroom from  '../../images/bed.svg'
 import bath from '../../images/bath.svg';
-// import {
-//     useParams
-// } from 'react-router-dom'
+import {
+    useParams
+} from 'react-router-dom'
 import './DetailPage.css';
 
-
 const DetialPage = () => {
-    // const  { apartmentid } = useParams();
+    const  { apartmentid } = useParams();
     const  [ hotel,setHotel ] = useState({});
 
-
+  
    useEffect(()=>{
         const settingHotel = () => {
              setHotel(  {
@@ -24,9 +23,11 @@ const DetialPage = () => {
                 price: '194',
                 img: 'https://i.ibb.co/2kXfz4Z/hotel-1.png'
             },)
+            console.log(apartmentid);
+            
         }
         settingHotel();
-   },[])
+   },[apartmentid])
 
     return (
         <div className="detail" style={{height: "2000px"}}>

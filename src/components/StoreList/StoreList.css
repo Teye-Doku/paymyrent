@@ -1,0 +1,51 @@
+.headlines p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    color: #275A53;
+    margin-top: 28px;
+    margin-bottom: 3px;
+}
+.headlines h2{
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 50px;
+    letter-spacing: 0.0015em;
+    color: #16322E;
+    margin-bottom: 55px;
+}
+.hotel-card .card-body{
+    padding: 18px 22px;
+}
+.hotel-card{
+    border-radius: 0px;
+    margin-bottom: 29px;
+}
+.hotel-card h4{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 0.0015em;
+    color: #275A53;
+    margin-top: 10px;
+}
+.mt_40{
+    margin-top: 40px;
+}
+.hotel-card .card-title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.0015em;
+    color: #16322E;
+    margin-bottom: 8px;
+}
+.hotel-card p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0015em;
+    color: #747474;
+}

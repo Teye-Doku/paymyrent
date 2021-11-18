@@ -1,0 +1,11 @@
+span {
+    content: "\20B5";
+  }
+  
+  
+  .hotel-card a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  

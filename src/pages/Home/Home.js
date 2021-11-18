@@ -1,6 +1,8 @@
 import './Home.css';
 import Service from '../../components/Services/Service';
 import housevector from '../../images/housevec.jpg'
+import housevectors from '../../images/housevecc.jpg';
+
 import {
   useHistory
 } from 'react-router-dom';
@@ -35,21 +37,21 @@ const Home = () => {
                     
                     </div>
                     <div className="home__service__item">
-                       <img src={housevector} alt="" />
+                       <img src={housevectors} alt="" />
                        <h3>Rent an office</h3>
                        <div className="home__service__item__p_container">
-                       <p>Find the most interesting houses for rent, easy on your pocket</p>
+                       <p>Find the most interesting offices for rent, easy on your pocket</p>
                        </div>
-                       <button >search offices</button>
+                       <button onClick={()=>history.push('/offices')}>search offices</button>
                     
                     </div>
                     <div className="home__service__item">
                        <img src={housevector} alt="" />
                        <h3>Rent a store</h3>
                        <div className="home__service__item__p_container">
-                       <p>Find the most interesting houses for rent, easy on your pocket</p>
+                       <p>Find the most interesting stores for rent, easy on your pocket</p>
                        </div>
-                       <button >search stores</button>
+                       <button onClick={()=>history.push('/stores')}>search stores</button>
                     
                     </div>
               </div>

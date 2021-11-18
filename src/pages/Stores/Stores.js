@@ -1,9 +1,10 @@
 import './Stores.css';
+import StoreList from '../../components/StoreList/StoreList';
 
 const  Stores = () =>{
     return (
         <div>
-             Stores page
+             <StoreList />
         </div>
     )
 }

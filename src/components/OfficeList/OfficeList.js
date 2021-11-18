@@ -1,21 +1,21 @@
 import React from 'react';
-import './HotelList.css';
-import SingleHotel from './SingleHotel';
-import {  hotels } from '../../utilities/hotels';
+import './OfficeList.css';
+import SingleOffice from './SingleOffice';
+import {  offices } from '../../utilities/offices';
 
 
-const HotelList = () => {
+const OfficeList = () => {
     return (
         <section className="hotel-list-wrapper">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="headlines text-center">
-                            <h2>Discover the latest Rent <br/> available today</h2>
+                            <h2>Discover your dream offices<br/> available today</h2>
                         </div>
                         <div className="row">
                             {
-                                hotels.map(hotel => <SingleHotel key={hotel.id} hotel={hotel}></SingleHotel>)
+                                offices.map(office => <SingleOffice key={office.id} office={office}/>)
                             }
                         </div>
                     </div>
@@ -25,4 +25,4 @@ const HotelList = () => {
     );
 };
 
-export default HotelList;
+export default OfficeList;

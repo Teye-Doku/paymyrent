@@ -70,6 +70,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .home__service__item {
   width: 350px;
@@ -109,8 +110,9 @@
    border-radius: 5px;
    width: 150px;
    height: 50px;
-   color: #e2d562;
+   color: #000;
    font-family: "Montserrat",sans-serif;
+   font-weight: bold;
    cursor: pointer;
    border: none;
    outline: none;
