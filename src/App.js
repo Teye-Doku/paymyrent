@@ -60,6 +60,7 @@ function App() {
       <Route path="/about" exact>
         <Header />
         <About />
+        <Footer />
       </Route>
       <Route path="/signup" exact>
         <Signup />

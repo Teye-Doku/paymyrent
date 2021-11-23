@@ -6,10 +6,12 @@
 .login__logo {
   width: 150px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   transition: all 0.3s ease-out;
 }
 .login__logo:hover {
+  
   transform: scale(1.5);
 }
 .login__body {
@@ -17,7 +19,7 @@
   background-color: #fff;
   height: fit-content;
   margin: auto;
-  border: 1px solid #31414e;
+  border: 1px solid #68c0b5;
   padding-top: 10px;
   border-radius: 5px;
   padding: 20px;
@@ -40,7 +42,7 @@
 }
 .login__body > form > button {
   height: 30px;
-  background-color: #8043a9;
+  background-color: #68c0b5;
   color: white;
   border: none;
   outline: none;
@@ -50,8 +52,8 @@
 }
 .login__body > form > button:hover {
   background-color: white;
-  color: #31414e;
-  border: 1px solid #31414e;
+  color: #68c0b5;
+  border: 1px solid #68c0b5;
 }
 
 .errorbar {

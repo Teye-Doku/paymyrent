@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/paymyrent.png';
+import logo from '../../images/paymyrent.jpg';
 import './Login.css';
 import {
  Link,

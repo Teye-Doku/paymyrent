@@ -6,7 +6,8 @@
 .signup__logo {
   width: 150px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   transition: all 0.3s ease-out;
 }
 .signup__logo:hover {
@@ -16,7 +17,7 @@
   width: 300px;
   height: fit-content;
   margin: auto;
-  border: 1px solid #31414e;
+  border: 1px solid #68c0b5;
   padding-top: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -41,7 +42,7 @@
 }
 .signup__body > form > button {
   height: 30px;
-  background-color: #8043a9;
+  background-color: #68c0b5;
   color: white;
   border: none;
   outline: none;
@@ -58,8 +59,8 @@
 }
 .signup__body > form > button:hover {
   background-color: white;
-  color: #31414e;
-  border: 1px solid #31414e;
+  color: #68c0b5;
+  border: 1px solid #68c0b5;
 }
 
 .link {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Signup.css';
-import logo from '../../images/paymyrent.png';
+import logo from '../../images/paymyrent.jpg';
 import {
  Link
 }from 'react-router-dom';
