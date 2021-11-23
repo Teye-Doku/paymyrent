@@ -93,7 +93,7 @@
    object-fit: contain;
 }
 .home__service__item:hover button {
-   background-color: #e2d562;
+   background-color: #68c0b5;
    color: white;
 }
 .home__service__item h3 {
@@ -117,7 +117,7 @@
    border: none;
    outline: none;
    font-weight: bold;
-   border: 1px solid #e2d562;
+   border: 1px solid #68c0b5;
 }
 .home__service__item__p_container {
    width: 220px;

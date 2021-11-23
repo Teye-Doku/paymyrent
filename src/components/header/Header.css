@@ -75,9 +75,13 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.header__nav button:hover {
-  background-color: #8043a9;
+.header__nav button a {
+   text-decoration: none;
 }
+.header__nav button:hover {
+  background-color: #68c0b5;
+}
+
 
 .mobile__view {
   position: absolute;
