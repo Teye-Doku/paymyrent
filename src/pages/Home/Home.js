@@ -2,6 +2,7 @@ import './Home.css';
 import Service from '../../components/Services/Service';
 import housevector from '../../images/housevec.jpg'
 import housevectors from '../../images/housevecc.jpg';
+import housevectorss from '../../images/houseveccc.jpg';
 
 import {
   useHistory
@@ -46,7 +47,7 @@ const Home = () => {
                     
                     </div>
                     <div className="home__service__item">
-                       <img src={housevector} alt="" />
+                       <img src={housevectorss} alt="" />
                        <h3>Rent a store</h3>
                        <div className="home__service__item__p_container">
                        <p>Find the most interesting stores for rent, easy on your pocket</p>

@@ -1,6 +1,6 @@
 .detailpage {
   margin-top: 20px;
-  width: 800px;
+  width: fit-content;
   height: 200;
   margin-left: auto;
   margin-right: auto;

@@ -12,6 +12,7 @@ import Signup from './pages/Signup/Signup';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
 import DetialPage from './pages/DetailPage/DetialPage';
+import StoreDetailPage from './pages/StoreDetailPage/StoreDetailPage';
 import Stores from './pages/Stores/Stores';
 import Offices from './pages/Offices/Offices';
 import Services from './pages/Services/Services';
@@ -24,6 +25,11 @@ function App() {
  <div className="App">
   <Router>
     <Switch>
+      <Route path="/store/:storeid" exact>
+        <Header />
+        <StoreDetailPage />
+        <Footer />
+      </Route>
       <Route path="/apartment/:apartmentid" exact>
         <Header />
         <DetialPage />

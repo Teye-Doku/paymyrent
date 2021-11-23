@@ -3,32 +3,30 @@ import bedroom from  '../../images/bed.svg'
 import bath from '../../images/bath.svg';
 import decoimage from '../../images/decoimage.jpg';
 import decoimages from '../../images/decorimages.jpg';
+import storeone from '../../images/stores/storeone.jpg';
 import {
     useParams
 } from 'react-router-dom'
-import './DetailPage.css';
+import './StoreDetailPage.css';
 
-const DetialPage = () => {
-    const  { apartmentid } = useParams();
-    const  [ hotel,setHotel ] = useState({});
+const StoreDetailPage = () => {
+    const  { storeid } = useParams();
+    const  [ store,setStore ] = useState({});
 
   
    useEffect(()=>{
-        const settingHotel = () => {
-             setHotel(  {
+        const settingStore = () => {
+            setStore({
                 id: 1,
-                name: 'American House',
                 place: 'East Legon,Accra',
-                bed: '3 Bedrooms',
-                bathroom: '2 Bathroom',
-                price: '194',
-                img: 'https://i.ibb.co/2kXfz4Z/hotel-1.png'
-            },)
-            console.log(apartmentid);
+                price: '3,000',
+                img: storeone
+            })
+            console.log(storeid);
             
         }
-        settingHotel();
-   },[apartmentid])
+        settingStore();
+   },[storeid])
 
     return (
         <div className="detail" style={{height: "2000px"}}>
@@ -39,11 +37,11 @@ const DetialPage = () => {
             <div className="detailpage__info">
               <div className="detailpage_iconsection">
               <div className="detialpageinfo__log">
-                     <p>{hotel.bed}</p>
+                     <p>{store.bed}</p>
                      <img src={bedroom} alt="" />
                 </div>
                 <div className="detialpageinfo__log">
-                     <p>{hotel.bathroom}</p>
+                     <p>{store.bathroom}</p>
                      <img src={bath} alt="" />
                 </div>
               </div>
@@ -53,7 +51,7 @@ const DetialPage = () => {
               </div>
               <div className="detailpage_description">
                  <h3>Location</h3>
-                 <p>{hotel.place}</p> 
+                 <p>{store.place}</p> 
               </div>
             </div>
             <div className="detail__location">
@@ -66,4 +64,4 @@ const DetialPage = () => {
     )
 }
 
-export default DetialPage;
+export default StoreDetailPage;

@@ -34,7 +34,7 @@ const Service = () => {
                     <div className="col-md-12">
                         <div className="headlines text-center">
                             <p>House Rent</p>
-                            <h2>Discover the latest Rent <br/> available today</h2>
+                            <h2>Discover best property <br/>deals in Ghana</h2>
                         </div>
                         <div className="row">
                             {

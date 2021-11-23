@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import logo from '../../images/paymyrent.png';
+import logo from '../../images/paymyrent.jpg';
 import './Header.css';
 import  * as FaIcons from "react-icons/fa";
 import {
