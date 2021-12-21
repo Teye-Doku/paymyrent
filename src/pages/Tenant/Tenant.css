@@ -1,0 +1,113 @@
+.tenat__hero {
+    width: 100%;
+    height: 200px;
+    background-color: #f2fafa;
+    padding-left: 100px;
+    padding-top: 70px;
+    box-sizing: border-box;
+  }
+  
+  .tenat__hero h3 {
+    font-family: "Roboto condensed", sans-serif;
+    color: #275a53;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .tenat__hero p {
+    font-family: "Montserrat", sans-serif;
+    color: #275a53;
+    font-weight: bold;
+  }
+
+  .tenat__info {
+       width: 60%;
+       height: fit-content;
+       margin: 20px auto;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.29);
+       padding: 20px;
+  }
+
+.tenat__info__title {
+    width: 100%;
+    height: 80px;
+    background-color: #cce9c9;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.tenat__info__title p {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+    color: #404040;
+}
+
+.tenat__info h3 {
+    font-family: "Roboto condensed",sans-serif;
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.tenat__form__name {
+     margin-top: 20px;
+}
+.tenat__form__name  input {
+ width: 100%;
+ border: 0.3px solid #cce9c9 ;
+ padding: 15px;
+ border-radius: 5px;
+ 
+}
+.tenat__form__name  input:focus{
+    outline: none;
+}
+
+.tenat__form__select {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tenat__form__select input {
+    width: 400px;
+    border: 0.3px solid #cce9c9 ;
+    padding: 15px;
+    border-radius: 5px;
+}
+.tenat__form__select select {
+    width: 400px;
+    border: 0.3px solid #cce9c9 ;
+    padding: 15px;
+    border-radius: 5px;
+}
+.tenat__form__select select:focus {
+   border: none;
+}
+
+.tenat__info button {
+     width: 150px;
+     height: 50px;
+     background-color: #404040;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-top: 20px;
+     font-family: "Roboto condensed",sans-serif;
+}
+
+@media screen and (max-width: 700px){
+    .tenat__info {
+        width: 90%;
+    }
+
+    .tenat__form__select {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

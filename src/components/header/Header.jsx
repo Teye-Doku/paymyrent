@@ -39,7 +39,9 @@ import { navitems } from '../../utilities/navitems'
       
           <>
             <header className="header">
-                <img className="header__logo" src={logo} alt="logo" />
+                <Link to="/">
+                 <img className="header__logo" src={logo} alt="logo" />
+                </Link>
                 {!mobile &&  <nav className="header__nav">
                     { navitems.map( navitem => (
                         <li className="navitem" key={navitem.title}> <NavLink to={navitem.url} exact activeClassName="active-link">{navitem.title}</NavLink></li>

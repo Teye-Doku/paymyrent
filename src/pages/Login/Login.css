@@ -34,7 +34,7 @@
   flex-direction: column;
 }
 .login__body > form > input {
-  height: 25px;
+  height: 30px;
   margin-bottom: 10px;
 }
 .login__body > form > input:focus {

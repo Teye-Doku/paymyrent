@@ -1,5 +1,8 @@
 import './Footer.css';
-
+import airteltigo from '../../images/payments/airteltigo.jpg';
+import mtn from '../../images/payments/mtn.png';
+import visa from '../../images/payments/visa.png';
+import vodafone from '../../images/payments/vodafone.png';
 
 const  Footer = () => {
     return (
@@ -41,6 +44,18 @@ const  Footer = () => {
                   <div className="footer__spacing"></div>
                   <p>Customer Support</p>
                   <p>Careers</p>
+              </div>
+           </div>
+           <div>
+           <div className="footer__item">
+                  <h3>Payment Methods</h3>
+                  <div className="footer__spacing"></div>
+                   <div className="payments">
+                       <img src={mtn} alt=""/>
+                       <img src={airteltigo} alt=""/>
+                       <img src={vodafone} alt=""/>
+                       <img src={visa} alt=""/>
+                   </div>
               </div>
            </div>
       </div>

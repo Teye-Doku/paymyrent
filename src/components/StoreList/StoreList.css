@@ -49,3 +49,39 @@
     letter-spacing: 0.0015em;
     color: #747474;
 }
+
+.search__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f2fafa;
+}
+.search__container__search {
+     width: 40%;
+     margin: 0 auto;
+     padding: 10px 5px;
+     background-color: white;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+     border-radius: 5px;
+}
+.search__container__search input {
+    width: 95%;
+    border: none;
+    margin-left: 10px;
+}
+
+.search__container__search input:focus {
+    outline: none;
+    border: none;
+}
+
+
+@media screen and ( max-width: 700px) {
+    .search__container, .search__container__search  {
+        width: 100%;
+    }
+    .search__container__search input {
+        width: 80%;
+    }  
+}

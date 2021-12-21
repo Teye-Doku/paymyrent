@@ -64,3 +64,12 @@
     justify-content: space-evenly;
   }
 }
+.payments {
+   display: flex;
+}
+.payments img {
+   width: 20px;
+   object-fit: contain;
+   margin-left: 10px;
+   border-radius: 5px;
+}

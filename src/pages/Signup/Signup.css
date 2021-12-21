@@ -34,7 +34,7 @@
   flex-direction: column;
 }
 .signup__body > form > input {
-  height: 25px;
+  height: 30px;
   margin-bottom: 10px;
 }
 .signup__body > form > input:focus {

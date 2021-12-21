@@ -19,18 +19,47 @@ import Services from './pages/Services/Services';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Houses from './pages/Houses/Houses';
+import Renovation from './pages/Renovation/Renovation';
+import Tenant from './pages/Tenant/Tenant';
+import OfficeDetailPage  from './pages/OfficeDetailPage/OfficeDetailPage';
+import Payment  from './pages/Payment/Payment';
+import SearchPage from './pages/SearchPage/SearchPage';
 
 function App() {
   return (
  <div className="App">
   <Router>
     <Switch>
+      <Route path="/search/:town/:roomnumber/:price" exact>
+        <Header />
+        <SearchPage />
+      </Route>
+      <Route path="/payments" exact>
+        <Header />
+        <Payment />
+        <Footer />
+      </Route>
+      <Route path="/offices/:officeid" exact>
+        <Header />
+        <OfficeDetailPage />
+        <Footer />
+      </Route>
+      <Route path="/verification" exact>
+        <Header />
+        <Tenant />
+        <Footer />
+      </Route>
+      <Route path="/renovation" exact>
+        <Header />
+        <Renovation />
+        <Footer />
+      </Route>
       <Route path="/store/:storeid" exact>
         <Header />
         <StoreDetailPage />
         <Footer />
       </Route>
-      <Route path="/apartment/:apartmentid" exact>
+      <Route path="/apartment/:houseid" exact>
         <Header />
         <DetialPage />
         <Footer />

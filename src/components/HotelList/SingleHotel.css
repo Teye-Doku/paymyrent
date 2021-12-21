@@ -8,3 +8,11 @@ span {
   color: white;
   font-weight: bold;
 }
+
+.details__button {
+  background-color: #245f55;
+  color: white;
+  border: none;
+  padding: 0 10px;
+  border-radius: 5px;
+}
