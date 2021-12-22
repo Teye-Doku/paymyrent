@@ -30,7 +30,7 @@ function App() {
  <div className="App">
   <Router>
     <Switch>
-      <Route path="/search/:town/:roomnumber/:price" exact>
+      <Route path="/search/:town" exact>
         <Header />
         <SearchPage />
       </Route>

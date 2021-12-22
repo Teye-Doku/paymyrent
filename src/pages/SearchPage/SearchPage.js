@@ -6,9 +6,10 @@ import './SearchPage.css';
 import useHttp from '../../hooks/useHttp';
 import SearchDefault from '../../components/SearchDefault/SearchDefault';
 import SingleHotel from '../../components/HotelList/SingleHotel';
+
 const SearchPage = () => {
      
-      const { town,roomnumber,price} = useParams();
+      const { town } = useParams();
       const { loading,sendRequest } = useHttp();
       const [ searchedHouses ,setHouses ] = useState([]);
       
@@ -18,24 +19,34 @@ const SearchPage = () => {
                  const responseData = await sendRequest(
                        `${process.env.REACT_APP_BACKEND_URL}/houses/`
                      ); 
-                 const searchedResults = town !== '' ? responseData?.houses.filter(house => house?.town.toLowerCase() === town) :
+                 const searchedResults = town ? responseData?.houses.filter(house => house?.town.toLowerCase() === town.toLowerCase()) :
                                           null;
-                 console.log(searchedResults);                             
+                 console.log(searchedResults);
+
                  setHouses(searchedResults);  
           
             }
             fetchHouses();
-            console.log(roomnumber,price)
-       },[sendRequest,town,roomnumber,price])
+   
+       },[sendRequest,town])
+      
      return(
          <div >
            { searchedHouses?.length !== 0 && loading && <p>loading...</p>}
            {searchedHouses && 
-           (<div className="search__result__container">
-               {
-                 searchedHouses?.map(searchhouse => <SingleHotel key={searchhouse._id} hotel={searchhouse} />)
-               }
-           </div>)}
+           (<>
+              { searchedHouses?.length >0 && (
+               <div className="search__result__banner">
+                <p>{searchedHouses?.length} result found</p>
+              </div>
+              )}
+             <div className="search__result__container">
+             
+             {
+               searchedHouses?.map(searchhouse => <SingleHotel className="search__page__single" key={searchhouse._id} hotel={searchhouse} />)
+             }
+         </div>
+           </>)}
            {searchedHouses?.length === 0 && <SearchDefault />}
          </div>
      );

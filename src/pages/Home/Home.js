@@ -21,7 +21,11 @@ const Home = () => {
     const [ price,setPrice ] = useState('1000-3000');
 
     const searchHouses =  () => {
-        history.push(`/search/${town}/${room}/${price}`)
+        history.push(`/search/${town}`)
+        if(!town) {
+          history.push('/')
+        }
+        console.log(room,price);
     }
 
      return (

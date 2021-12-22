@@ -1,6 +1,23 @@
 .search__result__container {
+    margin: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+}
+.search__page__single {
+    margin-left: 10px;
+}
+.search__result__banner {
+    height: 80px;
+    background-color: #f2fafa;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.search__result__banner p {
+     font-family: "Roboto condensed",sans-serif;
+     font-size: 20px;
+     font-weight: bold;
+    
 }
