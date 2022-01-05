@@ -60,7 +60,7 @@ import { navitems } from '../../utilities/navitems'
                     { navitems.map( navitem => (
                         <li className="sidebar__navitem" onClick={()=>setSidebar(false)} key={navitem.title}> <NavLink to={navitem.url} exact activeClassName="active-link">{navitem.title}</NavLink></li>
                     ))}
-                    <button>Login</button>
+                    <button><Link to="/login">Login</Link></button>
                 </nav>}
            </div>}
            {/* <div className="header__filter">

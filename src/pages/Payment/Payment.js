@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import { GiMoneyStack } from "react-icons/gi";
 import { AiOutlinePlus } from "react-icons/ai";
+import { 
+  useHistory
+ } from 'react-router-dom';
 
 import visa from '../../images/payments/visa.png';
 import airteltigo from '../../images/payments/airteltigo.jpg';
 import mtn from '../../images/payments/mtn.png';
 import vodafone from '../../images/payments/vodafone.png';
+import AuthContext from '../../context/authcontext';
 import './Payment.css';
 
 const  Payment = () =>{
@@ -14,8 +18,16 @@ const  Payment = () =>{
     const [ isMtn,setIsMtn ] = useState(false);
     const [ isAirtelTigo,setIsAirtelTigo ] = useState(false);
     const [ isVoda,setIsVoda ] = useState(false);
+    const history = useHistory();
+    const auth = useContext(AuthContext);
     return (
         <div className="payments" style={{height:"1000px"}}>
+            { !auth.token && (
+                <div className="payments__authentication">
+                      <button onClick={e=>history.push('/login')}>Login</button>
+                      <button onClick={e=>history.push('/register')}>Register</button>
+                </div>
+            )}
              <div className="payments__subscription">
                    <h3>Learn your payment plan</h3>
                    <div className="payments__money__icon">
@@ -42,7 +54,10 @@ const  Payment = () =>{
                  </div>
                      <p>Select Your Payment Method</p>
                 </div>
-                <div className="payments__confirm__method">
+                {!auth.token ? (<div>
+                    <p>Register And Login to proceed.</p>
+                </div>):(
+                     <div className="payments__confirm__method">
                      <div className="payments__method__add">
                           <div>
                           <img src={visa} alt="" onClick={()=>{
@@ -78,6 +93,7 @@ const  Payment = () =>{
                           </div>
                      </div>
                 </div>
+                )}
                 { isAdding && (
                      <div className="payments__info__inputs">
                      {

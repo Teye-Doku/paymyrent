@@ -24,10 +24,20 @@ import Tenant from './pages/Tenant/Tenant';
 import OfficeDetailPage  from './pages/OfficeDetailPage/OfficeDetailPage';
 import Payment  from './pages/Payment/Payment';
 import SearchPage from './pages/SearchPage/SearchPage';
+import useAuth from './hooks/useAuth';
+import AuthContext from './context/authcontext';
 
 function App() {
+  const {token,login,logout,userId } = useAuth();
   return (
- <div className="App">
+<AuthContext.Provider value={{
+   isLoggedIn:!!token,
+   login:login,
+   logout:logout,
+   token:token,
+   userId:userId
+}}>
+       <div className="App">
   <Router>
     <Switch>
       <Route path="/search/:town" exact>
@@ -107,6 +117,7 @@ function App() {
         
         
     </div>
+    </AuthContext.Provider>
   );
 }
 
