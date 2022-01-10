@@ -111,13 +111,14 @@
 }
 .submit {
     background-color: blue;
-    width: 100px;
+    width: fit-content;
     height: 50%;
     color: white;
     cursor: pointer;
     border: 1px solid white;
     height: 40px;
     border-radius: 25px;
+    padding: 0 10px;
     outline: none;
 }
 .cancel {

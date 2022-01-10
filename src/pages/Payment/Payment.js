@@ -1,27 +1,63 @@
 import { useState,useContext } from 'react';
 import { GiMoneyStack } from "react-icons/gi";
-import { AiOutlinePlus } from "react-icons/ai";
+import { v4 as uuidv4 } from 'uuid';
+// import { AiOutlinePlus } from "react-icons/ai";
 import { 
   useHistory
  } from 'react-router-dom';
+import useHttp from '../../hooks/useHttp'; 
 
-import visa from '../../images/payments/visa.png';
-import airteltigo from '../../images/payments/airteltigo.jpg';
-import mtn from '../../images/payments/mtn.png';
-import vodafone from '../../images/payments/vodafone.png';
+// import visa from '../../images/payments/visa.png';
+// import airteltigo from '../../images/payments/airteltigo.jpg';
+// import mtn from '../../images/payments/mtn.png';
+// import vodafone from '../../images/payments/vodafone.png';
 import AuthContext from '../../context/authcontext';
+import HubtelPayment from '../HubtelPayment/HubtelPayment';
 import './Payment.css';
 
 const  Payment = () =>{
-    const [ isAdding,setIsAdding ] = useState(false);
-    const [ isVisa,setIsVisa ] = useState(false);
-    const [ isMtn,setIsMtn ] = useState(false);
-    const [ isAirtelTigo,setIsAirtelTigo ] = useState(false);
-    const [ isVoda,setIsVoda ] = useState(false);
+    // const [ isAdding,setIsAdding ] = useState(false);
+    // const [ isVisa,setIsVisa ] = useState(false);
+    // const [ isMtn,setIsMtn ] = useState(false);
+    // const [ isAirtelTigo,setIsAirtelTigo ] = useState(false);
+    // const [ isVoda,setIsVoda ] = useState(false);
+    const [ status,setStatus ] = useState('');
+    const [ to, setTo ] = useState('');
     const history = useHistory();
     const auth = useContext(AuthContext);
+    const { sendRequest } = useHttp();
+    const onSubmit = async () => {
+           try {
+             const responseData   =   await sendRequest(
+                   'https://payproxyapi.hubtel.com/items/initiate',
+                    'POST',
+                     JSON.stringify( {  
+                        "totalAmount": 0.5,
+                        "description": "Test with Kwatelai CheckoutInvoice",
+                        "callbackUrl": "https://webhook.site/1e46da76-db56-447e-a71a-56c61bb4160e",
+                        "returnUrl": "http://hubtel.com/online",
+                        "merchantAccountNumber": "2016341",
+                        "cancellationUrl": "http://hubtel.com/online",
+                        "clientReference": uuidv4()
+                      }),
+                      {
+                          'Content-Type':'application/json',
+                          'Authorization':'Basic OEVFZ3BSTDpmMjUyMmU5NGViNTU0MzBkOWVmYTA4OWZlODdhNGVmZQ=='
+                      }
+                   )
+                   console.log(responseData)
+                    setStatus(responseData.status);
+                    setTo(responseData.data.checkoutDirectUrl);
+                    
+                   //history.replace(responseData.data.checkoutDirectUrl)
+           }catch(e) {
+               console.log(e)
+           }
+    }
     return (
-        <div className="payments" style={{height:"1000px"}}>
+        <>
+           { status && <HubtelPayment to={to} /> } 
+           {!status && (<div className="payments" style={{height:"1000px"}}>
             { !auth.token && (
                 <div className="payments__authentication">
                       <button onClick={e=>history.push('/login')}>Login</button>
@@ -52,49 +88,56 @@ const  Payment = () =>{
                 <div className="payments__step__2">
                      2
                  </div>
-                     <p>Select Your Payment Method</p>
+                     <p>Proceed to checkout</p>
                 </div>
                 {!auth.token ? (<div>
                     <p>Register And Login to proceed.</p>
                 </div>):(
-                     <div className="payments__confirm__method">
-                     <div className="payments__method__add">
-                          <div>
-                          <img src={visa} alt="" onClick={()=>{
-                              setIsVisa(!isVisa);
-                              setIsMtn(false);
-                              setIsAirtelTigo(false);
-                              setIsVoda(false);
-                          }}/>
-                           { isAdding && (<span>
-                                  <img src={mtn} alt="" onClick={()=>{
-                                      setIsMtn(!isMtn);
-                                      setIsVisa(false)
-                                      setIsAirtelTigo(false);
-                                     setIsVoda(false);
-                                  }}/>
-                                  <img src={airteltigo} alt="" onClick={()=>{
-                                      setIsMtn(false);
-                                      setIsVisa(false)
-                                      setIsAirtelTigo(!isAirtelTigo);
-                                     setIsVoda(false);
-                                  }} />
-                                  <img src={vodafone} alt="" onClick={()=>{
-                                      setIsMtn(false);
-                                      setIsVisa(false)
-                                      setIsAirtelTigo(false);
-                                      setIsVoda(!isVoda);
-                                  }} />
-                                  </span>)}
-                          </div>
-                          <div>  
-                            {!isAdding &&  <button onClick={()=>setIsAdding(true)}>Add payment method <AiOutlinePlus /></button>}
+                 <div className="payments__submit__cancel">
+                     
+                      <button className="submit" onClick={onSubmit}>Proceed to Checkout</button> 
+                      {/* { isAdding && <button onClick={()=>setIsAdding(false)} className="cancel">Cancel</button>} */}
+                 </div>
+
+                //      <div className="payments__confirm__method">
+                //      <div className="payments__method__add">
+                //           <div>
+                //           <img src={visa} alt="" onClick={()=>{
+                //               setIsVisa(!isVisa);
+                //               setIsMtn(false);
+                //               setIsAirtelTigo(false);
+                //               setIsVoda(false);
+                //           }}/>
+                //            { isAdding && (<span>
+                //                   <img src={mtn} alt="" onClick={()=>{
+                //                       setIsMtn(!isMtn);
+                //                       setIsVisa(false)
+                //                       setIsAirtelTigo(false);
+                //                      setIsVoda(false);
+                //                   }}/>
+                //                   <img src={airteltigo} alt="" onClick={()=>{
+                //                       setIsMtn(false);
+                //                       setIsVisa(false)
+                //                       setIsAirtelTigo(!isAirtelTigo);
+                //                      setIsVoda(false);
+                //                   }} />
+                //                   <img src={vodafone} alt="" onClick={()=>{
+                //                       setIsMtn(false);
+                //                       setIsVisa(false)
+                //                       setIsAirtelTigo(false);
+                //                       setIsVoda(!isVoda);
+                //                   }} />
+                //                   </span>)}
+                //           </div>
+                //           <div>  
+                //             {!isAdding &&  <button onClick={()=>setIsAdding(true)}>Add payment method <AiOutlinePlus /></button>}
                             
-                          </div>
-                     </div>
-                </div>
+                //           </div>
+                //      </div>
+                // </div>
+             
                 )}
-                { isAdding && (
+                {/* { isAdding && (
                      <div className="payments__info__inputs">
                      {
                          isVisa && (  <div className="payments__visa">
@@ -145,12 +188,8 @@ const  Payment = () =>{
                      }
                   </div>
                 )
-                }
-                <div className="payments__submit__cancel">
-                     
-                     { isAdding?<button className="submit">Submit</button> :null}
-                     { isAdding && <button onClick={()=>setIsAdding(false)} className="cancel">Cancel</button>}
-                </div>
+                } */}
+                
              </div>
              <div className="payments__review">
                 <div className="payments__review__description">
@@ -168,7 +207,8 @@ const  Payment = () =>{
                      </div>
                 </div>
              </div>
-        </div>
+        </div>)}
+        </>
     )
 }
 

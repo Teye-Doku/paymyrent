@@ -25,7 +25,8 @@ import OfficeDetailPage  from './pages/OfficeDetailPage/OfficeDetailPage';
 import Payment  from './pages/Payment/Payment';
 import SearchPage from './pages/SearchPage/SearchPage';
 import useAuth from './hooks/useAuth';
-import AuthContext from './context/authcontext';
+import AuthContext from './context/authcontext'; 
+ 
 
 function App() {
   const {token,login,logout,userId } = useAuth();
@@ -37,9 +38,11 @@ function App() {
    token:token,
    userId:userId
 }}>
-       <div className="App">
+ <div className="App">
   <Router>
     <Switch>
+   
+
       <Route path="/search/:town" exact>
         <Header />
         <SearchPage />
