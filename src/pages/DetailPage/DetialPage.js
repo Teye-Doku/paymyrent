@@ -81,7 +81,7 @@ const DetialPage = () => {
                  </ul>
             </div>
             <div className="detail__payment">
-                 <button onClick={()=>history.push('/payments')}>press to continue</button>
+                 <button onClick={()=>history.push(`/payments/${house._id}`)}>press to continue</button>
             </div>
         </div>
     )

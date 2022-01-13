@@ -1,38 +1,43 @@
-import { useState,useContext } from 'react';
+import { useState,useContext,useEffect } from 'react';
 import { GiMoneyStack } from "react-icons/gi";
 import { v4 as uuidv4 } from 'uuid';
-// import { AiOutlinePlus } from "react-icons/ai";
+
 import { 
-  useHistory
+  useHistory,
+  useParams
  } from 'react-router-dom';
 import useHttp from '../../hooks/useHttp'; 
 
-// import visa from '../../images/payments/visa.png';
-// import airteltigo from '../../images/payments/airteltigo.jpg';
-// import mtn from '../../images/payments/mtn.png';
-// import vodafone from '../../images/payments/vodafone.png';
+
 import AuthContext from '../../context/authcontext';
 import HubtelPayment from '../HubtelPayment/HubtelPayment';
 import './Payment.css';
 
 const  Payment = () =>{
-    // const [ isAdding,setIsAdding ] = useState(false);
-    // const [ isVisa,setIsVisa ] = useState(false);
-    // const [ isMtn,setIsMtn ] = useState(false);
-    // const [ isAirtelTigo,setIsAirtelTigo ] = useState(false);
-    // const [ isVoda,setIsVoda ] = useState(false);
+     const { housepayid } = useParams();
     const [ status,setStatus ] = useState('');
     const [ to, setTo ] = useState('');
+    const [ house,setHouse ] = useState(null);
     const history = useHistory();
     const auth = useContext(AuthContext);
     const { sendRequest } = useHttp();
+
+
+    useEffect(()=>{
+        const getHouse = async () => {
+            const responseData = await
+             sendRequest(`${process.env.REACT_APP_BACKEND_URL}/houses/${housepayid}`);
+             setHouse(responseData?.house);
+        }
+        getHouse();
+    },[sendRequest,housepayid])
     const onSubmit = async () => {
            try {
              const responseData   =   await sendRequest(
                    'https://payproxyapi.hubtel.com/items/initiate',
                     'POST',
                      JSON.stringify( {  
-                        "totalAmount": 0.5,
+                        "totalAmount": (house?.price * 0.3),
                         "description": "Test with Kwatelai CheckoutInvoice",
                         "callbackUrl": "https://webhook.site/1e46da76-db56-447e-a71a-56c61bb4160e",
                         "returnUrl": "http://hubtel.com/online",
@@ -50,8 +55,9 @@ const  Payment = () =>{
                     setTo(responseData.data.checkoutDirectUrl);
                     
                    //history.replace(responseData.data.checkoutDirectUrl)
+                   
            }catch(e) {
-               console.log(e)
+               
            }
     }
     return (
@@ -80,7 +86,7 @@ const  Payment = () =>{
                 </div>
                 <div className="payments__confirm__actual">
                     <p>You are required to pay 30% of rent which equals 3 months,
-                    paying the rest in monthly deductions.</p>
+                    paying the rest in monthly deductions. Initial payment:{" "} { house && (house?.price * 0.3)} ghana cedis</p>
                 </div>
              </div>
              <div className="payments__method">

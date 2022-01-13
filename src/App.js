@@ -26,6 +26,8 @@ import Payment  from './pages/Payment/Payment';
 import SearchPage from './pages/SearchPage/SearchPage';
 import useAuth from './hooks/useAuth';
 import AuthContext from './context/authcontext'; 
+import StorePayment from './pages/StorePayment/StorePayment';
+import OfficePayment from './pages/OfficePayment/OfficePayment';
  
 
 function App() {
@@ -47,7 +49,17 @@ function App() {
         <Header />
         <SearchPage />
       </Route>
-      <Route path="/payments" exact>
+      <Route path="/officepayments/:officepayid" exact>
+        <Header />
+        <OfficePayment />
+        <Footer />
+      </Route>
+      <Route path="/storepayments/:storepayid" exact>
+        <Header />
+        <StorePayment />
+        <Footer />
+      </Route>
+      <Route path="/payments/:housepayid" exact>
         <Header />
         <Payment />
         <Footer />

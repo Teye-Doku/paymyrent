@@ -6,6 +6,7 @@ import { useState,useEffect } from 'react';
 // import storeone from '../../images/stores/storeone.jpg';
 import { GrLocation } from "react-icons/gr";
 import {
+    useHistory,
     useParams
 } from 'react-router-dom'
 import './StoreDetailPage.css';
@@ -14,6 +15,7 @@ import useHttp from '../../hooks/useHttp';
 const StoreDetailPage = () => {
     const  { storeid } = useParams();
     const { sendRequest } = useHttp();
+    const history = useHistory();
     const  [ store,setStore ] = useState({});
 
   
@@ -49,7 +51,7 @@ const StoreDetailPage = () => {
                  </ul>
             </div>
             <div className="detail__payment">
-                 <button>press to continue</button>
+                 <button onClick={e=>history.push(`/storepayments/${storeid}`)}>press to continue</button>
             </div>
         </div>
     )

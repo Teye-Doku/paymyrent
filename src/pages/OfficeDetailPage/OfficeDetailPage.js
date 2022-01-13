@@ -1,6 +1,7 @@
 import { useState,useEffect} from 'react';
 import {
-     useParams
+     useParams,
+     useHistory
 } from 'react-router-dom';
 import { GrLocation } from "react-icons/gr";
 import useHttp from '../../hooks/useHttp';
@@ -12,6 +13,7 @@ const  OfficeDetailPage = () =>{
     const { officeid } = useParams();
     const [ office,setOffice ] = useState({});
     const { sendRequest  }   = useHttp();
+    const history = useHistory();
 
     useEffect(()=> {
          const fetchOffice = async () => {
@@ -45,7 +47,7 @@ const  OfficeDetailPage = () =>{
                  </ul>
             </div>
         <div className="detail__payment">
-             <button>press to continue</button>
+             <button onClick={e=>history.push(`/officepayments/${officeid}`)}>press to continue</button>
         </div>
     </div>
     )

@@ -1,0 +1,200 @@
+.payments {
+    width: 60%;
+    margin: 10px auto;
+    display: block;
+}
+
+.payments__subscription {
+    margin-top: 10px;
+    width: 100%;
+    height:80px;
+    background-color: #68c0b5;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payments__subscription h3 {
+    font-family: "Roboto condensed",sans-serif;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.payments__money__icon {
+   width: 40px;
+   height: 40px;
+   border-radius: 20px;
+   border: 0.5px solid white;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 10px;
+}
+
+.payments__confirm {
+   width: 100%;
+   margin: 30px 0;
+}
+.payments__confirm__description,
+.payments__method__description,
+.payments__review__description {
+   display: flex;
+   align-items: center;
+}
+.payments__step__1,
+.payments__step__2,
+.payments__step__3 {
+   margin-right: 20px;
+   width: 30px;
+   height: 30px;
+   border-radius: 15px;
+   border: 0.5px solid white;
+   color: white;
+   font-family: "Roboto condensed",sans-serif;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #68c0b5;
+}
+.payments__confirm__description p, 
+.payments__method__description p,
+.payments__review__description p {
+   padding-top: 10px;
+   font-family: "Roboto condensed",sans-serif;
+   font-size: 20px;
+}
+.payments__confirm__actual {
+   margin-top: 20px;
+}
+.payments__method__add {
+   width: 100%;
+   margin: 10px;
+   border: 1px solid #68c0b5;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 5px;
+}
+.payments__method__add img {
+    width: 30px;
+    object-fit: contain;
+}
+.payments__method__add button {
+    border: none;
+    padding: 5px;
+}
+.payments__confirm__actual p {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.payments__method__review {
+   width: 90%;
+   border: 0.2px solid #68c0b5;
+   border-radius: 5px;
+   padding: 30px;
+}
+.payments__method__review li {
+   font-family: "Montserrat",sans-serif;
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.payments__submit__cancel {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.submit {
+   background-color: blue;
+   width: fit-content;
+   height: 50%;
+   color: white;
+   cursor: pointer;
+   border: 1px solid white;
+   height: 40px;
+   border-radius: 25px;
+   padding: 0 10px;
+   outline: none;
+}
+.cancel {
+   width: 100px;
+   height: 50%;
+   color: #68c0b5;
+   cursor: pointer;
+   border: 1px solid #68c0b5;
+   height: 40px;
+   border-radius: 25px;
+   outline: none; 
+}
+.payments__info__inputs {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.payments__name {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 10px;
+   
+}
+.payments__name input {
+ width: 350px;
+}  
+.payments__name p,
+.payments__visa__info p{
+    margin-bottom: 0;
+    font-family: "Roboto condensed" ,sans-serif;
+}
+.payments__visa__info {
+   display: flex;
+   width: 350px;
+   justify-content: space-between;
+}
+.payments__card__info input {
+    width: 150px;
+}
+.payments__mtn p {
+ margin-bottom: 0;
+ font-family: "Roboto condensed",sans-serif;
+}
+.payments__authentication {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.payments__authentication button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #68c0b5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media screen and ( max-width:700px) {
+   .payments__subscription {
+       width: 100%;
+       padding: 0 20px;
+   }
+   .payments__authentication {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+   .payments__authentication button {
+       margin-top: 10px;
+   }
+}
