@@ -1,0 +1,47 @@
+.howitworkss {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.howitworks__banner {
+     background-color: #f2fafa;
+     height: 100px;
+     padding: 40px;
+}
+.howitworks__banner h3 {
+     font-family: "Roboto condensed",sans-serif;
+     font-size: 35px;
+}
+.home__steps_headingg h5 {
+     font-family: "Poppins",sans-serif;
+     font-size: 30px;
+}
+.home__steps_itemm {
+     display: flex;
+     width: fit-content;
+     align-items: center;
+     justify-content: center;
+     align-items: center;
+     border: 0.01px solid #68c0b5;
+     width: 400px;
+     padding: 5px;
+     margin-bottom: 10px;
+}
+
+.home__steps_itemm img {
+     width: 50px;
+     object-fit: contain;
+}
+
+.home__steps_itemm h3 {
+     font-family: "Poppins",sans-serif;
+     font-size: 18px;
+}
+
+.home__steps_itemm p {
+    font-family: "Montserrat",sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}

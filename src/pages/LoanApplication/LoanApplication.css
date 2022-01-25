@@ -1,0 +1,319 @@
+.loan__application {
+    width: 70%;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.loan__application__requirement {
+     width: 100%;
+     height: 180px;
+     background-color: #245f55;
+     padding:20px;
+}
+.loan__application__requirement h3 {
+  font-family: "Poppins",sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 30px;
+}
+.outer__circle {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+.inner__circle {
+    width: 7px;
+    height: 7px;
+    background-color:white;
+    border-radius: 50%;
+}
+
+.requirement__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -15px;
+}
+
+.requirement__item p {
+    margin-left: 10px;
+    color: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*form styling*/
+.loan__application__form {
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+    height: fit-content;
+    padding-bottom: 20px;
+}
+.loan__application__form__years {
+     padding: 10px;
+}
+.loan__application__form__years p {
+     font-family: "Roboto condensed",sans-serif;
+     color: #245f55;
+     margin-top: -3px;
+
+}
+.loan__application__form__years input {
+  width: 90%;
+  border: 1px solid #ededed;
+  height: 30px;
+  border-top: 3px solid #ededed;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+.loan__application__form__years select {
+    width: 90%;
+    border: 1px solid #ededed;
+    border-top: 3px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+.loan__application__form__years select:focus {
+ outline: none;
+}
+.loan__application__form__years input:focus {
+    outline: none;
+}
+.loan__application__form h3 { 
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #245f55;
+    margin-top: 10px;
+}
+.loan__application__title {
+     padding: 0 10px;
+}
+.loan__application__title select {
+     width: 20%;
+     margin-right: 20px;
+     border: 1px solid #ededed;
+    height: 30px;
+    border-top: 3px solid #ededed;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+.loan__application__title .input__one {
+    width: 30%;
+    border: 1px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-right: 20px;
+    border-top: 3px solid #ededed;
+}
+
+.loan__application__title .input__one:focus, .loan__application__title .input__two:focus {
+     outline: none;
+}
+.loan__application__title .input__two {
+    width: 40%;
+    border: 1px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-right: 20px;
+    border-top: 3px solid #ededed;
+}
+.loan__application__title select:focus {
+     outline: none;
+} 
+
+.loan__application__name input {
+  width: 30%;
+  border: 1px solid #ededed;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  border-top: 3px solid #ededed;
+}
+.loan__application__name {
+    padding: 0 10px;
+}
+.loan__application__name input:focus { 
+    outline: none;
+}
+.loan__application__gender {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.loan__application__gender select {
+     width: 30%;
+     border: 1px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+    border-top: 3px solid #ededed;
+    margin-right: 20px;
+}
+.loan__application__gender input {
+    border: 1px solid #ededed;
+    width: 60%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 20px;
+    border-top: 3px solid #ededed;
+
+}
+.loan__application__gender input:focus {
+    outline: none;
+}
+.loan__application__placeofbirth {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.loan__application__placeofbirth input {
+    width: 90%;
+    border: 1px solid #ededed;
+    border-top: 3px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px; 
+    margin-top: 10px;
+}
+.loan__application__placeofbirth p {
+     margin-bottom: -10px;
+     font-family: "Roboto condensed",sans-serif;
+     font-size: 13px;
+}
+.loan__application__placeofbirth input:focus {
+    outline: none;
+}
+.loan__application__card_expiry {
+    display: flex;
+    justify-content: space-around;
+}
+.loan__application__card_expiry input {
+    width: 500px;
+    border: 1px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+    border-top: 3px solid #ededed;
+    margin-right: 20px;
+}
+.loan__application__card_expiry  p {
+    margin-bottom: -2px;
+    font-family: "Roboto condensed",sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.loan__application__mary__status {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.loan__application__mary__status select , .loan__application__mary__status input{
+    width: 30%;
+    border: 1px solid #ededed;
+   height: 30px;
+   border-radius: 5px;
+   padding: 0 20px;
+   border-top: 3px solid #ededed;
+   margin-right: 20px;  
+}
+.loan__application__phone__number {
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.loan__application__phone__number input {
+    width: 30%;
+    border: 1px solid #ededed;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+    border-top: 3px solid #ededed;
+    margin-right: 20px;
+    
+}
+.loan__application__button__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.loan__application__button__container button {
+     border: none;
+     width: 150px;
+     color: white;
+     font-family: "Poppins",sans-serif;
+     cursor: pointer;
+     border-radius: 20px;
+     height: 40px;
+     background-color: #245f55;
+     transition: all 0.3s ease-in;
+}
+.loan__application__button__container button:hover {
+   background-color: #fff;
+   border: 0.2px solid #245f55;
+   color: #245f55;
+}
+@media screen and (max-width:700px) {
+    .loan__application {
+        width: 90%;
+    }
+    .loan__application__form__years input,.loan__application__form__years select  {
+        width: 90%;
+    }
+    .loan__application__title {
+        display: flex;
+        flex-direction: column;
+    }
+    .loan__application__title select , .loan__application__title .input__one , .loan__application__title .input__two {
+        width: 90%;
+        margin-top: 10px;
+    } 
+    .loan__application__name {
+        display: flex;
+        flex-direction: column;
+    }
+    .loan__application__name input {
+         width:90%;
+    }
+    .loan__application__gender {
+        display: flex;
+        flex-direction: column;
+    }
+    .loan__application__gender select ,.loan__application__gender input {
+         width: 90%;
+         margin-top: 10px;
+    }
+    .loan__application__form {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+    .loan__application__card_expiry {
+        display: flex;
+        flex-direction:column;
+        margin-left: 10px;
+    }
+     .loan__application__card_expiry input {
+         width: 390px;
+    }
+    .loan__application__phone__number input {
+        width: 90%;
+    }
+    .loan__application__mary__status {
+        display: flex;
+        flex-direction: column;
+    }
+    .loan__application__mary__status input {
+        margin-top: 10px;
+        width: 90%;
+    }
+}

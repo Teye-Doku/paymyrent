@@ -10,8 +10,8 @@ const navitems = [
         'active':'active-link'
     },
     {
-        'title':'Services',
-        'url':"/services",
+        'title':'How It Works',
+        'url':"/howitworks",
         'active':'active-link'
     },
     {

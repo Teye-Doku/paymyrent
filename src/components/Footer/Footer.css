@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  min-height: 250px;
+  min-height: 400px;
   display: flex;
 }
 
@@ -50,7 +50,10 @@
   border-radius: 5px;
   margin-left: 10px;
 }
-
+.payments .icon {
+   font-size: 20px;
+   color: white;
+}
 .header__licensed > p {
   font-family: "Montserrat", sans-serif;
 }
@@ -66,6 +69,8 @@
 }
 .payments {
    display: flex;
+   justify-content: space-around;
+   width: 200px;
 }
 .payments img {
    width: 20px;

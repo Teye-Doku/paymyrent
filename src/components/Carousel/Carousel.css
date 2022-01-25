@@ -1,0 +1,31 @@
+.carousel__container {
+    padding: 40px 40px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+    text-align: center;
+}
+.carousel__container h4 {
+     font-family: "Montserrat",sans-serif;
+     font-weight: 600;
+     font-size: 18px;
+     
+}
+.carousel__container h3 {
+     font-family: "Poppins",sans-serif;
+     margin-bottom: 30px;
+}
+button.rec-dot{
+    background-color: #404040(235, 16, 16);
+    box-shadow: 0 0 1px 3px #68c0b5;
+  }
+  
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px rgba(16, 155, 235, 0.829);
+  }
+.rec.rec-arrow {
+    background-color: #255025;
+}
+.rec.rec-arrow:hover {
+    background-color: #294129;
+    color: white;
+}

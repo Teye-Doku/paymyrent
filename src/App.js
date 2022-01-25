@@ -28,6 +28,8 @@ import useAuth from './hooks/useAuth';
 import AuthContext from './context/authcontext'; 
 import StorePayment from './pages/StorePayment/StorePayment';
 import OfficePayment from './pages/OfficePayment/OfficePayment';
+import LoanApplication from './pages/LoanApplication/LoanApplication';
+import HowItWorks from './pages/HowItWorks/HowItWorks';
  
 
 function App() {
@@ -45,6 +47,15 @@ function App() {
     <Switch>
    
 
+      <Route path="/howitworks" exact>
+        <Header />
+        <HowItWorks />
+        <Footer />
+      </Route>
+      <Route path="/applyloan" exact>
+        <Header />
+        <LoanApplication />
+      </Route>
       <Route path="/search/:town" exact>
         <Header />
         <SearchPage />
