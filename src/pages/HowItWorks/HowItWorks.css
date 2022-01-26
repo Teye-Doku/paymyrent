@@ -45,3 +45,12 @@
     font-size: 15px;
     font-weight: 600;
 }
+
+@media screen and (max-with:700px) {
+    .home__stepss {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+}

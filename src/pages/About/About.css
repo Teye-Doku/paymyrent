@@ -12,10 +12,20 @@
   color: #191d1c;
   font-size: 30px;
 }
+.about__container {
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.about__container img {
+   width: 300px;
+   object-fit: contain;
 
+}
 .about__content {
   width: 50%;
-  margin: 10px auto;
+  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
   padding: 30px;
   border-radius: 5px;
@@ -34,6 +44,12 @@
 }
 
 @media screen and ( max-width:700px) {
+  .about__container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
   .about__content {
     width: 80%;
   }

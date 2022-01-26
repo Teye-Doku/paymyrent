@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import './LoanApplication.css';
 
 
 
 const LoanApplication = () =>{
+    const [ agree, setAgree ] = useState(false);
     return (
         <div className='loan__application'>
              <div className='loan__application__requirement'>
@@ -11,7 +13,7 @@ const LoanApplication = () =>{
                          <div className='outer__circle'>
                               <div className='inner__circle'></div>
                          </div>
-                         <p>National ID (eg. Voter's card,Ghana card,passport)</p>
+                         <p>Ghana Card (eg. Voter's card,Ghana card,passport)</p>
                      </div>
                      <div className='requirement__item'>
                          <div className='outer__circle'>
@@ -32,12 +34,8 @@ const LoanApplication = () =>{
                      <input type="number"  />
                  </div>
                  <div className='loan__application__form__years'>
-                    <p>Select the type of structure you are applying loan for.</p>
-                    <select>
-                        <option value="house">House</option>
-                        <option value="office">Office</option>
-                        <option value="store">Store</option>
-                    </select>
+                    <p>Enter charges per month.</p>
+                    <input type="text"  />
                  </div>
                   <h3>Personal Information</h3>
                   <div className='loan__application__title'>
@@ -102,9 +100,12 @@ const LoanApplication = () =>{
                   <div className='loan__application__phone__number'>
                       <input type="text" placeholder='Phone Number' />
                   </div>
-
+                  <div className="loan__application__terms__agreement">
+                      <p>Agree to Terms and Conditions</p>
+                      <input type="checkbox" value={agree} onChange={e=>setAgree(!agree)}/>
+                  </div>
                  <div className='loan__application__button__container'>
-                 <button> Send </button>
+                 { agree && <button> Send </button>}
                  </div>
              </div>
         </div>

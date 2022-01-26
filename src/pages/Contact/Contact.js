@@ -5,6 +5,7 @@ import location from '../../images/Location.jpg';
 import ContactItem from './ContactItem';
 import pen from '../../images/pen.jpg';
 import user from '../../images/user.jpg';
+import whatsup from '../../images/what.jpg';
 import './Contact.css';
 
 const  Contact = () =>{
@@ -49,6 +50,9 @@ const  Contact = () =>{
                     </div>
                     
                     <button> Send Message</button>
+                    <div className='whatsup__container'>
+                     <a href='https://wa.me/+233279401417'><img src={whatsup} alt=""/></a>
+                    </div>
             </div>
         </div>
     )

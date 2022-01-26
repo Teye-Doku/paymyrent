@@ -90,7 +90,7 @@ const Home = () => {
              <div className="home__services">
                     <div className="home__service__item">
                        <img src={housevectors} alt="" />
-                       <h3>Pay Home Rent</h3>
+                       {/* <h3>Pay Home Rent</h3> */}
                        <div className="home__service__item__p_container">
                        <p>We help you to pay your home rent.</p>
                        </div>
@@ -99,7 +99,7 @@ const Home = () => {
                     </div>
                     <div className="home__service__item">
                        <img src={housevector} alt="" />
-                       <h3>Pay Office Rent</h3>
+                       {/* <h3>Pay Office Rent</h3> */}
                        <div className="home__service__item__p_container">
                        <p>We help you to pay your office rent.</p>
                        </div>
@@ -108,7 +108,7 @@ const Home = () => {
                     </div>
                     <div className="home__service__item">
                        <img src={housevectorss} alt="" />
-                       <h3>Pay Store Rent</h3>
+                       {/* <h3>Pay Store Rent</h3> */}
                        <div className="home__service__item__p_container">
                        <p>We help you to pay your store rent.</p>
                        </div>
