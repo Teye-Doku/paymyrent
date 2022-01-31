@@ -7,7 +7,7 @@ import {
 import useHttp from '../../hooks/useHttp';
 import { useForm } from 'react-hook-form';
 const Signup = () => {
-   const { sendRequest,clearError } = useHttp();  
+   const { sendRequest,clearError,error } = useHttp();  
    const {  register, handleSubmit ,errors } = useForm();
     
       const onSubmt = async (values) => {
@@ -58,8 +58,9 @@ const Signup = () => {
                     <input type="text" placeholder="phone" name="phone" ref={register({
                            required:'phone is required'
                          })} />
-                    <button  type="submit">signup</button>
                     {errors.phone && <p style={{color:"red"}}>{errors.phone.message}</p>}
+                    <button  type="submit">signup</button>
+                    {error && <p>User Already exists try to login</p>}
                </form>
             <p>having account already ? <Link className="link" to="/login">login</Link> </p>
            

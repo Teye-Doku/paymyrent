@@ -1,4 +1,6 @@
 
+import { useRef,useState } from 'react';
+import emailjs from 'emailjs-com';
 import email from '../../images/email.jpg';
 import phone from '../../images/phone.jpg';
 import location from '../../images/Location.jpg';
@@ -10,6 +12,23 @@ import './Contact.css';
 
 const  Contact = () =>{
     
+    const form = useRef();
+    const [contacting,setContacting ] = useState(false);
+
+    const submitform = e => {
+         
+         e.preventDefault();
+         setContacting(true);
+         emailjs.sendForm('service_pm7gene', 'template_1tk134h',form.current, 'user_sZdhBQugkvHjrY95FRdbd')
+         .then((result) => {
+             console.log(result.text);
+         setContacting(false);    
+         }, (error) => {
+             console.log(error.text);
+             setContacting(false);
+         });
+         
+    }
 
 
     return (
@@ -19,40 +38,42 @@ const  Contact = () =>{
             </div>
             <div className='contact__info'>
                 <ContactItem img={email} title="Email Address" subtitle="info@jaskosdata.com" />
-                <ContactItem img={phone} title="Office Line" subtitle="+233(0) 249855932" />
+                <ContactItem img={phone} title="Office Line" subtitle="+233(0) 557384119" />
                 <ContactItem img={location} title="Location" subtitle="Alfred Adjetey, Street" />
             </div>
             <div className="contact__form">
               <h1>Talk to us</h1>
-              <div className='contact__form__groups'>
+               <form ref={form} onSubmit={submitform}>
+               <div className='contact__form__groups'>
                    <div className='contact__form_item'>
                        <img  src={user} alt=""/>
-                       <input type="text" placeholder='Enter your name' />
+                       <input type="text" name='fullname' placeholder='Enter your name' />
                    </div> 
                    <div className='contact__form_item'>
                        <img src={email} alt=""/>
-                       <input type="text" placeholder='Enter your email' />
+                       <input type="text" name='user_email' placeholder='Enter your email' />
                    </div> 
               </div>
               <div className='contact__form__groups'>
                    <div className='contact__form_item'>
                        <img  src={email} alt=""/>
-                       <input type="text" placeholder='Subject' />
+                       <input type="text" name='subject' placeholder='Subject' />
                    </div> 
                    <div className='contact__form_item'>
                        <img src={phone} alt=""/>
-                       <input type="text" placeholder='Enter your number' />
+                       <input type="text" name='phone' placeholder='Enter your number' />
                    </div> 
               </div>
                     <div className='textarea__container'>
-                    <textarea rows="10"></textarea>
+                    <textarea rows="10" name='message'></textarea>
                     <img src={pen} alt="" />
                     </div>
                     
-                    <button> Send Message</button>
+                    <button type='submit'> {contacting ? "Sending Message...":"Send Message"}</button>
                     <div className='whatsup__container'>
                      <a href='https://wa.me/+233279401417'><img src={whatsup} alt=""/></a>
                     </div>
+               </form>
             </div>
         </div>
     )

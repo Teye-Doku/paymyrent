@@ -13,7 +13,7 @@ import { useForm } from 'react-hook-form';
 const Login = () => {
 
  const auth = useContext(AuthContext) 
- const { sendRequest,clearError } = useHttp();
+ const { sendRequest,clearError,error } = useHttp();
  const { register,handleSubmit,errors } = useForm();
      const onSubmit = async (values) => {
         try {
@@ -54,6 +54,7 @@ const Login = () => {
                          })}  />
                      {errors.password && <p style={{color:"red"}}>{errors.password.message}</p>}    
                     <button  type="submit">login</button>
+                    {error && <p>User does not exists, try to sign up</p>}
                   
                </form>
             <p>not having account? <Link to="/signup" className="link">sign up</Link> </p>

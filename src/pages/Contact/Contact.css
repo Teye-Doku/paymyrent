@@ -75,6 +75,10 @@
    outline: none;
    height: 90%;
    margin-left: 20px;
+   background-color: white;
+}
+.contact__form_item input:focus {
+    background-color: white;
 }
 .contact__form_item ::placeholder {
    font-family: "Montserrat",sans-serif;

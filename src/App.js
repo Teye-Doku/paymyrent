@@ -1,4 +1,4 @@
-
+ import React, { Suspense } from 'react';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import  {
@@ -6,30 +6,38 @@ import  {
   Switch,
   Route
 } from 'react-router-dom';
-import Login from './pages/Login/Login';
-import Header from './components/header/Header';
-import Signup from './pages/Signup/Signup';
-import Home from './pages/Home/Home';
-import Footer from './components/Footer/Footer';
-import DetialPage from './pages/DetailPage/DetialPage';
-import StoreDetailPage from './pages/StoreDetailPage/StoreDetailPage';
-import Stores from './pages/Stores/Stores';
-import Offices from './pages/Offices/Offices';
-import Services from './pages/Services/Services';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
-import Houses from './pages/Houses/Houses';
-import Renovation from './pages/Renovation/Renovation';
-import Tenant from './pages/Tenant/Tenant';
-import OfficeDetailPage  from './pages/OfficeDetailPage/OfficeDetailPage';
-import Payment  from './pages/Payment/Payment';
-import SearchPage from './pages/SearchPage/SearchPage';
+
+
 import useAuth from './hooks/useAuth';
 import AuthContext from './context/authcontext'; 
-import StorePayment from './pages/StorePayment/StorePayment';
-import OfficePayment from './pages/OfficePayment/OfficePayment';
-import LoanApplication from './pages/LoanApplication/LoanApplication';
-import HowItWorks from './pages/HowItWorks/HowItWorks';
+import Header from './components/header/Header';
+import Footer from './components/Footer/Footer';
+import Loading from './components/Loading/Loading';
+const Login = React.lazy(()=>import('./pages/Login/Login'));
+const Signup = React.lazy(()=> import('./pages/Signup/Signup'));
+const Home = React.lazy(()=> import('./pages/Home/Home'));
+const About = React.lazy(()=> import('./pages/About/About'));
+const Contact = React.lazy(()=> import('./pages/Contact/Contact'));
+const LoanApplication = React.lazy(()=>import('./pages/LoanApplication/LoanApplication'));
+
+
+// import DetialPage from './pages/DetailPage/DetialPage';
+// import StoreDetailPage from './pages/StoreDetailPage/StoreDetailPage';
+// import Stores from './pages/Stores/Stores';
+// import Offices from './pages/Offices/Offices';
+// import Services from './pages/Services/Services';
+
+// import Houses from './pages/Houses/Houses';
+// import Renovation from './pages/Renovation/Renovation';
+// import Tenant from './pages/Tenant/Tenant';
+// import OfficeDetailPage  from './pages/OfficeDetailPage/OfficeDetailPage';
+// import Payment  from './pages/Payment/Payment';
+// import SearchPage from './pages/SearchPage/SearchPage';
+
+// import StorePayment from './pages/StorePayment/StorePayment';
+// import OfficePayment from './pages/OfficePayment/OfficePayment';
+// import LoanApplication from './pages/LoanApplication/LoanApplication';
+// import HowItWorks from './pages/HowItWorks/HowItWorks';
  
 
 function App() {
@@ -46,21 +54,18 @@ function App() {
   <Router>
     <Switch>
    
-
-      <Route path="/howitworks" exact>
+     <Suspense fallback={<Loading />}>
+             {/* <Route path="/howitworks" exact>
         <Header />
         <HowItWorks />
         <Footer />
-      </Route>
-      <Route path="/applyloan" exact>
-        <Header />
-        <LoanApplication />
-      </Route>
-      <Route path="/search/:town" exact>
+      </Route> */}
+    
+      {/* <Route path="/search/:town" exact>
         <Header />
         <SearchPage />
-      </Route>
-      <Route path="/officepayments/:officepayid" exact>
+      </Route> */}
+      {/* <Route path="/officepayments/:officepayid" exact>
         <Header />
         <OfficePayment />
         <Footer />
@@ -112,16 +117,21 @@ function App() {
         <Header />
         <Services />
         <Footer />
-      </Route>
+      </Route> */}
+         {/* <Route path="/houses" exact>
+        <Header />
+        <Houses />
+      </Route> */}
       <Route path="/contact" exact>
         <Header />
         <Contact />
         <Footer />
       </Route>
-      <Route path="/houses" exact>
+      <Route path="/applyloan" exact>
         <Header />
-        <Houses />
+        <LoanApplication />
       </Route>
+   
       <Route path="/about" exact>
         <Header />
         <About />
@@ -138,6 +148,8 @@ function App() {
         <Home />
         <Footer />
       </Route>
+     </Suspense>
+   
     </Switch>
   </Router>
         
