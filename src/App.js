@@ -18,6 +18,15 @@ const Signup = React.lazy(()=> import('./pages/Signup/Signup'));
 const Home = React.lazy(()=> import('./pages/Home/Home'));
 const About = React.lazy(()=> import('./pages/About/About'));
 const Contact = React.lazy(()=> import('./pages/Contact/Contact'));
+const OfficePayment = React.lazy(()=> import('./pages/OfficePayment/OfficePayment'));
+const StorePayment = React.lazy(()=>import('./pages/StorePayment/StorePayment'));
+const Payment = React.lazy(()=>import('./pages/Payment/Payment'));
+const Houses = React.lazy(()=>import('./pages/Houses/Houses'));
+const Offices = React.lazy(()=>import('./pages/Offices/Offices'))
+const Stores = React.lazy(()=>import('./pages/Stores/Stores'));
+const OfficeDetailPage = React.lazy(()=>import('./pages/OfficeDetailPage/OfficeDetailPage'));
+const StoreDetailPage = React.lazy(()=>import('./pages/StoreDetailPage/StoreDetailPage'));
+const DetialPage = React.lazy(()=>import('./pages/DetailPage/DetialPage'));
 const LoanApplication = React.lazy(()=>import('./pages/LoanApplication/LoanApplication'));
 
 
@@ -65,7 +74,7 @@ function App() {
         <Header />
         <SearchPage />
       </Route> */}
-      {/* <Route path="/officepayments/:officepayid" exact>
+      <Route path="/officepayments/:officepayid" exact>
         <Header />
         <OfficePayment />
         <Footer />
@@ -85,7 +94,7 @@ function App() {
         <OfficeDetailPage />
         <Footer />
       </Route>
-      <Route path="/verification" exact>
+      {/* <Route path="/verification" exact>
         <Header />
         <Tenant />
         <Footer />
@@ -94,7 +103,7 @@ function App() {
         <Header />
         <Renovation />
         <Footer />
-      </Route>
+      </Route> */}
       <Route path="/store/:storeid" exact>
         <Header />
         <StoreDetailPage />
@@ -113,15 +122,15 @@ function App() {
         <Header />
         <Offices />
       </Route>
-      <Route path="/services" exact>
+      {/* <Route path="/services" exact>
         <Header />
         <Services />
         <Footer />
       </Route> */}
-         {/* <Route path="/houses" exact>
+      <Route path="/houses" exact>
         <Header />
         <Houses />
-      </Route> */}
+      </Route>
       <Route path="/contact" exact>
         <Header />
         <Contact />

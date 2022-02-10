@@ -94,7 +94,7 @@ const Home = () => {
                        <div className="home__service__item__p_container">
                        <p>We help you to pay your home rent.</p>
                        </div>
-                       <button onClick={()=>history.push('/applyloan')}>Apply Now</button>
+                       <button onClick={()=>history.push('/houses')}>Search Houses</button>
                     
                     </div>
                     <div className="home__service__item">
@@ -103,7 +103,7 @@ const Home = () => {
                        <div className="home__service__item__p_container">
                        <p>We help you to pay your office rent.</p>
                        </div>
-                       <button onClick={()=>history.push('/applyloan')}>Apply Now</button>
+                       <button onClick={()=>history.push('/offices')}>Search Offices</button>
                     
                     </div>
                     <div className="home__service__item">
@@ -112,7 +112,7 @@ const Home = () => {
                        <div className="home__service__item__p_container">
                        <p>We help you to pay your store rent.</p>
                        </div>
-                       <button onClick={()=>history.push('/applyloan')}>Apply Now</button>
+                       <button onClick={()=>history.push('/stores')}>Search Stores</button>
                     
                     </div>
               </div>
