@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Home.css';
 // import Service from '../../components/Services/Service';
 import Carousels from '../../components/Carousel/Carousel';
@@ -15,8 +16,8 @@ import money from '../../images/money.jpg';
 import hidden from '../../images/hidden.jpg';
 import man from '../../images/man.jpeg';
 
-// import { GrLocation,GrRestroom } from "react-icons/gr";
-// import { GiMoneyStack } from "react-icons/gi";
+import { GrLocation,GrRestroom } from "react-icons/gr";
+import { GiMoneyStack } from "react-icons/gi";
 // import useHttp from '../../hooks/useHttp';
 import {
   useHistory
@@ -27,34 +28,32 @@ import {
 const Home = () => {
     const history = useHistory();
     // const { sendRequest } = useHttp();
-    // const [ town,setTown ] = useState('');
-    // const [ room,setRoom ] = useState('1');
-    // const [ price,setPrice ] = useState('1000-3000');
+    const [ town,setTown ] = useState('');
+    const [ room,setRoom ] = useState('1');
+    const [ price,setPrice ] = useState('1000-3000');
 
-    // const searchHouses =  () => {
-    //     history.push(`/search/${town}`)
-    //     if(!town) {
-    //       history.push('/')
-    //     }
-    //     console.log(room,price);
-    // }
+    const searchHouses =  () => {
+        history.push(`/search/${town}`)
+        if(!town) {
+          history.push('/')
+        }
+        console.log(room,price);
+    }
 
      return (
          <div className="home" >
              <div className="home__hero">
                  
-                  <div className='home__hero__message'>
+                  {/* <div className='home__hero__message'>
                     <h1 className='home__hero__message_h1'>Is Your Rent Due? </h1>
-                    {/* <h1 className='home__hero__message_h2'>Monthly</h1>
-
-                    <p>Is Your rent due?</p> */}
+                  
                     <p>Don't worry, we will pay upfront for you.</p>
 
                     <button onClick={e=>history.push('/signup')}>get started</button>
                     
-                  </div>
+                  </div> */}
                  
-                     {/* <div className="home__search__container">
+                     <div className="home__search__container">
                      <h1>Find Your Dream House</h1>
                         <div className="home__search__inputs">
                           <div className="home__room_location">
@@ -84,7 +83,7 @@ const Home = () => {
                           </div>
                          <button onClick={searchHouses}>Search</button>
                        </div>
-                     </div> */}
+                     </div>
                  
              </div> 
              <div className="home__services">

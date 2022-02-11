@@ -28,7 +28,7 @@ const OfficeDetailPage = React.lazy(()=>import('./pages/OfficeDetailPage/OfficeD
 const StoreDetailPage = React.lazy(()=>import('./pages/StoreDetailPage/StoreDetailPage'));
 const DetialPage = React.lazy(()=>import('./pages/DetailPage/DetialPage'));
 const LoanApplication = React.lazy(()=>import('./pages/LoanApplication/LoanApplication'));
-
+const SearchPage = React.lazy(()=>import('./pages/SearchPage/SearchPage'));
 
 // import DetialPage from './pages/DetailPage/DetialPage';
 // import StoreDetailPage from './pages/StoreDetailPage/StoreDetailPage';
@@ -70,10 +70,10 @@ function App() {
         <Footer />
       </Route> */}
     
-      {/* <Route path="/search/:town" exact>
+      <Route path="/search/:town" exact>
         <Header />
         <SearchPage />
-      </Route> */}
+      </Route>
       <Route path="/officepayments/:officepayid" exact>
         <Header />
         <OfficePayment />
