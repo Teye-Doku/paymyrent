@@ -68,7 +68,7 @@ const  StorePayment = () =>{
             { !auth.token && (
                 <div className="payments__authentication">
                       <button onClick={e=>history.push('/login')}>Login</button>
-                      <button onClick={e=>history.push('/register')}>Register</button>
+                      <button onClick={e=>history.push('/signup')}>Register</button>
                 </div>
             )}
              <div className="payments__subscription">
