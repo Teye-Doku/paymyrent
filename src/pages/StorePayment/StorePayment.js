@@ -41,9 +41,9 @@ const  StorePayment = () =>{
                         "totalAmount": (store?.price * 0.3),
                         "description": "Test with Kwatelai CheckoutInvoice",
                         "callbackUrl": "https://webhook.site/1e46da76-db56-447e-a71a-56c61bb4160e",
-                        "returnUrl": "http://hubtel.com/online",
+                        "returnUrl": `https://paymyrentgh.netlify.app/storepayments/${storepayid}`,
                         "merchantAccountNumber": "2016341",
-                        "cancellationUrl": "http://hubtel.com/online",
+                        "cancellationUrl": `https://paymyrentgh.netlify.app/storepayments/${storepayid}`,
                         "clientReference": uuidv4()
                       }),
                       {
